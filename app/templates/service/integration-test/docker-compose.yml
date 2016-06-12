@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  integration-tester:
+    build: .
+    links:
+      - <%= name %>
+  <%= name %>:
+    build: ../..
+    expose:
+      - "<%= port %>"
