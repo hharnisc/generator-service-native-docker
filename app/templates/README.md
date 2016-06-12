@@ -1,5 +1,7 @@
 # <%= displayName %>
 
+NOTE: This is a work in progress
+
 <%= description %>
 
 ## Table Of Contents

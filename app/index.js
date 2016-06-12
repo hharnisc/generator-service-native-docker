@@ -108,6 +108,8 @@ module.exports = generators.Base.extend({
     copy('service/package.json');
     copy('service/README.md');
     copy('.gitignore');
+    copy('.travis.yml');
+    copy('docker-compose.yml');
     copy('Dockerfile');
     copy('local_deploy.sh');
     copy('README.md');

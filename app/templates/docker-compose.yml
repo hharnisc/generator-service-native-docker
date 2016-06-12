@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+  <%= name %>:
+    build: .
+    command: npm start -- --port <%= port %>
+    environment:
+      - LOGSTASH_SERVICE_HOST=logstash
+      - NODE_ENV=production
+    links:
+      - logstash
+    ports:
+      - "<%= port %>:<%= port %>"
+  elasticsearch:
+    image: hharnisc/elasticsearch:v1
+    expose:
+      - "9200"
+  logstash:
+    image: hharnisc/logstash:v2
+    command: logstash -f /etc/logstash/conf.d/logstash.conf
+    expose:
+      - "5000"
+    links:
+      - elasticsearch
+  kibana:
+    image: hharnisc/kibana:v1
+    ports:
+      - "5601:5601"
+    links:
+      - elasticsearch
