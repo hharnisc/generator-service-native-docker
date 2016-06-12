@@ -1,7 +1,7 @@
 {
-  "name": "generator-kube-service",
+  "name": "generator-service-native-docker",
   "version": "0.1.0",
-  "description": "Build and deploy a node service to kubernetes",
+  "description": "Generate a node service (expecting native docker - docker for mac/windows beta)",
   "files": [
     "app"
   ],
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hharnisc/generator-kube-service"
+    "url": "https://github.com/hharnisc/generator-service-native-docker"
   },
   "license": "MIT"
 }
