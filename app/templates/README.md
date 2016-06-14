@@ -15,20 +15,7 @@ NOTE: This is a work in progress
 
 ## Quickstart
 
-Install [docker toolbox](https://www.docker.com/products/docker-toolbox)
-
-Install redspread (local kubernetes cluster management)
-
-```bash
-$ brew tap redspread/spread
-$ brew install spread
-```
-
-Start Up `localkube`
-
-```bash
-$ spread cluster start
-```
+Install [docker beta](https://beta.docker.com/)
 
 Do a local deploy
 
@@ -38,7 +25,7 @@ Do a local deploy
 
 ## Testing
 
-Install [docker toolbox](https://www.docker.com/products/docker-toolbox) (for CI tests)
+Install [docker toolbox](https://beta.docker.com/) (for CI tests)
 
 ```sh
 $ cd service
@@ -96,9 +83,23 @@ $ npm start
 
 Follow [Quickstart](#quickstart) instructions
 
-## Running locally with hot reload
+### Deploy Locally With Hot Reload
 
-TODO - (mostly waiting on docker for mac and localkube to play nice)
+```bash
+./local_deploy.sh -d
+```
+
+### Deploy Locally And Skip Build Step
+
+```bash
+./local_deploy.sh -n
+```
+
+### Deploy Locally With Hot Reload And Skip Build Step
+
+```bash
+./local_deploy.sh -dn
+```
 
 ## Deploy To Production
 
