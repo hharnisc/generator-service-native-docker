@@ -110,10 +110,10 @@ module.exports = generators.Base.extend({
     copy('.gitignore');
     copy('.travis.yml');
     copy('docker-compose.yml');
+    copy('docker-compose-dev.yml');
     copy('Dockerfile');
     copy('local_deploy.sh');
     copy('README.md');
-    copy('service.rc.yml');
   },
 
   default: function() {
