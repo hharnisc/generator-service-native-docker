@@ -25,10 +25,10 @@ if [ "$DEV" = true ];then
 
 else
   if [ "$BUILD" = true ];then
-    printf "${GREEN}Docker Compose Up${NC}\n" && \
-    docker-compose -p localdeploy up && \
     printf "${GREEN}Docker Compose Build${NC}\n" && \
-    docker-compose -p localdeploy build
+    docker-compose -p localdeploy build && \
+    printf "${GREEN}Docker Compose Up${NC}\n" && \
+    docker-compose -p localdeploy up
   else
     printf "${GREEN}Docker Compose Up${NC}\n" && \
     docker-compose -p localdeploy up
