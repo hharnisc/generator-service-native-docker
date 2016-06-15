@@ -7,7 +7,6 @@ services:
     environment:
       - LOGSTASH_SERVICE_HOST=logstash
       - LOGSTASH_SERVICE_PORT=5000
-      - NODE_ENV=production
     links:
       - logstash
     ports:
