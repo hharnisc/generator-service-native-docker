@@ -88,7 +88,6 @@ module.exports = generators.Base.extend({
                     this.strings
                   );
                 }.bind(this);
-    copy('rs/service.yml');
     copy('service/integration-test/.babelrc');
     copy('service/integration-test/docker-compose.yml');
     copy('service/integration-test/Dockerfile');
