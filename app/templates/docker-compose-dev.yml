@@ -3,7 +3,7 @@ version: '2'
 services:
   <%= name %>:
     build: .
-    command: npm run dev -- --port <%= port %>
+    command: npm run dev
     environment:
       - LOGSTASH_SERVICE_HOST=logstash
       - LOGSTASH_SERVICE_PORT=5000

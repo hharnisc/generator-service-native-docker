@@ -7,5 +7,6 @@ services:
       - <%= name %>
   <%= name %>:
     build: ../..
+    command: npm start
     expose:
       - "<%= port %>"
