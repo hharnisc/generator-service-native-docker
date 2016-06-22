@@ -36,4 +36,4 @@ else
 fi
 
 docker-compose -p localdeploy kill
-docker-compose -p localdeploy rm -f --all
+docker-compose -p localdeploy rm -f
